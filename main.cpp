@@ -5,6 +5,8 @@ using namespace std;
 
 int main() {
   int dataTemp;
+  int sumData = 0;
+  int counter = 0;
   
   // load input file
   ifstream inFile; // declare stream variable
@@ -18,7 +20,8 @@ int main() {
     if (dataTemp >= 0)
     {
       // update cumulative value of all data and number of data points loaded
-      
+      sumData = sumData + dataTemp;
+      counter++;
     }
     else // the value is negative and we should exit
     {
@@ -27,4 +30,8 @@ int main() {
       break;
     }
   }
+// confused on how to display sum
+// also wasn't able to get code to run right, using online GDB was confusing
+  
+  return 0;
 }
